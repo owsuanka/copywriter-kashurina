@@ -1,0 +1,13 @@
+@import "./app.css";
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-raleway: "Raleway", sans-serif;
+  --color-orange-dark: oklch(0.4824 0.0772 46.91); 
+  --color-main: oklch(0.9685 0.0384 89.09);
+  --color-table1: oklch(0.8913 0.0345 71.63);
+  --color-table2: oklch(0.9263 0.028 70.93);
+  --color-hr: oklch(0.8759 0.0346 92.29);
+  --color-rectan:  oklch(0.9885 0.0098 87.47);
+}

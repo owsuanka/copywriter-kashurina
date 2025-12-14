@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены</title>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-main font-raleway font-medium text-orange-dark @container flex flex-col min-h-dvh">
+
+<!-- форма заявки -->
+<div class="w-full h-full invisible grid justify-center content-center opacity-0 fixed duration-300 z-999" id="my-modal">
+    <div class=" bg-main shadow-md rounded-md shadow-orange-dark/75 @xs:max-w-[300px] @3xl:max-w-[500px] @xs:p-[30px] @3xl:p-[45px] ">
+        <div class="flex justify-end mb-6">
+            <h1 class="@xs:text-2xl @3xl:text-3xl font-display text-nowrap mr-3 @3xl:mr-17">Оформить заказ</h1>
+            <button class="@xs:text-xl @3xl:text-2xl hover:cursor-pointer pt-1" id="close-button">X</button>
+        </div>
+        <form class="text-sm @3xl:text-lg">
+            <label>Ваше имя</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="firstname" placeholder="Иван">
+
+            <label>Ваша фамилия</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="lastname" placeholder="Иванов">
+
+            <label>Телефон для связи с вами</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="tel" name="phone" placeholder="+7 (999) 999 99-99">
+
+            <label>Ваша электронная почта</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="email" name="email" placeholder="IvanIvanov@mail.ru">
+
+            <label>Опишите ваш заказ</label>
+            <textarea class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" name="message" placeholder="Текст вашего сообщения"></textarea>
+
+            <div class="w-[100%] p-[8px] @3xl:p-[12px] border-1 rounded-md grid content-center bg-orange-dark text-main hover:animate-pulse">
+                <input type="submit" value="Оставить заявку" id="submit-btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="w-[100%] h-[100%] top-0 left-0 fixed bg-black/20 invisible opacity-0 duration-300 z-998" id="bg-modal"></div>
+<!-- форма заявки -->
+
+
+<header class="flex flex-col @5xl:flex-row items-center justify-between font-raleway w-full h-40 @3xl:h-30 @5xl:h-24 pt-4 @xs:px-10 @3xl:px-15 @5xl:px-25">
+    <div class="flex items-center gap-x-[10px]">
+        <a class="w-[80px]" href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
+        <p class="cursor-default">KopyKash</p>
+    </div>
+    <div class="flex flex-col @3xl:flex-row items-center gap-4 @5xl:gap-6">
+        <div class="flex gap-4 @5xl:gap-6">
+            <a class="hover:underline text-nowrap" href="./about.html">Обо мне</a>
+            <a class="hover:underline" href="./services.html">Услуги</a>
+            <a class="hover:underline" href="./reviews.html">Отзывы</a>
+            <a class="hover:underline" href="./price.html">Цены</a>
+        </div>
+        <button type="button" id="open-modal-btn" class="text-main bg-orange-dark rounded-md transition hover:animate-pulse hover:cursor-pointer px-5 h-10 inline-flex items-center justify-center text-nowrap">
+            <p class="">Заказать текст</p>
+        </button>
+    </div>
+</header>
+
+<script src="./index.js"></script>
+
+
+<div class="py-10 @xs:px-10 @3xl:px-15 @5xl:px-25 @xs:text-md @3xl:text-lg @5xl:text-2xl">
+    <table class="tabel-auto text-orange-dark m-auto w-[80%]">
+        <thead class="border-collapse border-2 border-orange-dark">
+            <tr class="bg-table1"> 
+                <th class="p-2 text-center border-r-2 border-orange-dark w-[50%]">Вид работы</th> 
+                <th class="p-2 text-center border-r-2 border-orange-dark w-[50%]">Цены</th> 
+            </tr>
+        </thead>
+        <tbody class="border-collapse border-2 border-orange-dark">
+            <tr class="bg-table2"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Коммерческий текст</td> 
+                <td class="p-2 text-center">от 2100 руб.</td> 
+            </tr>
+            <tr class="bg-table1"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Информационный текст</td> 
+                <td class="p-2 text-center">от 2100 руб.</td> 
+            </tr>
+            <tr class="bg-table2"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Технический текст</td> 
+                <td class="p-2 text-center">от 2100 руб.</td> 
+            </tr>
+            <tr class="bg-table1"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Коммерческий LSI-текст</td> 
+                <td class="p-2 text-center">от 3100 руб.</td> 
+            </tr>
+            <tr class="bg-table2"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Описание карточек товаров</td> 
+                <td class="p-2 text-center">от 1000 руб. за карточку</td> 
+            </tr>
+            <tr class="bg-table1"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Статья для блога</td> 
+                <td class="p-2 text-center">от 1400 руб. за страницу</td> 
+            </tr>
+            <tr class="bg-table2"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Title + Description для страницы сайта</td> 
+                <td class="p-2 text-center">1400 руб. за страницу</td> 
+            </tr>
+            <tr class="bg-table1"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Уникальное название, нейминг</td> 
+                <td class="p-2 text-center">11000 руб.</td> 
+            </tr>
+            <tr class="bg-table2"> 
+                <td class="p-2 text-center border-r-2 border-orange-dark">Сценарий для аудио- и видеороликов</td> 
+                <td class="p-2 text-center">3000 руб. за минуту</td> 
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>
+
+<div class="mt-auto @xs:px-10 @3xl:px-15 @5xl:px-25">
+    <hr class="border-hr ">
+</div>
+
+<footer class="flex flex-col @2xl:flex-row items-center @2xl:items-start justify-between py-[54px] @xs:px-10 @3xl:px-15 @5xl:px-25 ">
+    <div class="flex flex-col gap-[20px] @2xl:gap-[88px]">
+        <p class="text-orange-dark cursor-default">Копирайтер Ульяна Назаркина</p>
+        <div class="flex">
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon.svg" alt="фейсбук">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-1.svg" alt="ин">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-2.svg" alt="ютуб">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-3.svg" alt="инстаграм">
+            </a>    
+        </div>                                
+    </div>
+    <a class="" href="./index.html" target="_blank">
+        <img src="./images/logo.png" alt="logo" class="w-[150px]">
+    </a>
+    <div class="flex flex-col gap-[16px] text-orange-dark/50 text-center @2xl:text-right">
+        <p class="font-semibold text-orange-dark cursor-default">Страницы</p>
+        <a class="hover:underline" href="./about.html" target="_blank">Обо мне</a>
+        <a class="hover:underline" href="./services.html" target="_blank">Услуги</a>
+        <a class="hover:underline" href="./reviews.html" target="_blank">Отзывы</a>
+        <a class="hover:underline" href="./price.html" target="_blank">Цены</a>
+    </div>
+</footer>
+
+</body>
+</html>

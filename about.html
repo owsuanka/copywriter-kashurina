@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-main font-raleway font-medium text-orange-dark @container flex flex-col min-h-dvh">
+
+<!-- форма заявки -->
+<div class="w-full h-full invisible grid justify-center content-center opacity-0 fixed duration-300 z-999" id="my-modal">
+    <div class=" bg-main shadow-md rounded-md shadow-orange-dark/75 @xs:max-w-[300px] @3xl:max-w-[500px] @xs:p-[30px] @3xl:p-[45px] ">
+        <div class="flex justify-end mb-6">
+            <h1 class="@xs:text-2xl @3xl:text-3xl font-display text-nowrap mr-3 @3xl:mr-17">Оформить заказ</h1>
+            <button class="@xs:text-xl @3xl:text-2xl hover:cursor-pointer pt-1" id="close-button">X</button>
+        </div>
+        <form class="text-sm @3xl:text-lg">
+            <label>Ваше имя</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="firstname" placeholder="Иван">
+
+            <label>Ваша фамилия</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="lastname" placeholder="Иванов">
+
+            <label>Телефон для связи с вами</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="tel" name="phone" placeholder="+7 (999) 999 99-99">
+
+            <label>Ваша электронная почта</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="email" name="email" placeholder="IvanIvanov@mail.ru">
+
+            <label>Опишите ваш заказ</label>
+            <textarea class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" name="message" placeholder="Текст вашего сообщения"></textarea>
+
+            <div class="w-[100%] p-[8px] @3xl:p-[12px] border-1 rounded-md grid content-center bg-orange-dark text-main hover:animate-pulse">
+                <input type="submit" value="Оставить заявку" id="submit-btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="w-[100%] h-[100%] top-0 left-0 fixed bg-black/20 invisible opacity-0 duration-300 z-998" id="bg-modal"></div>
+<!-- форма заявки -->
+
+
+<header class="flex flex-col @5xl:flex-row items-center justify-between font-raleway w-full h-40 @3xl:h-30 @5xl:h-24 pt-4 @xs:px-10 @3xl:px-15 @5xl:px-25">
+    <div class="flex items-center gap-x-[10px]">
+        <a class="w-[80px]" href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
+        <p class="cursor-default">KopyKash</p>
+    </div>
+    <div class="flex flex-col @3xl:flex-row items-center gap-4 @5xl:gap-6">
+        <div class="flex gap-4 @5xl:gap-6">
+            <a class="hover:underline text-nowrap" href="./about.html">Обо мне</a>
+            <a class="hover:underline" href="./services.html">Услуги</a>
+            <a class="hover:underline" href="./reviews.html">Отзывы</a>
+            <a class="hover:underline" href="./price.html">Цены</a>
+        </div>
+        <button type="button" id="open-modal-btn" class="text-main bg-orange-dark rounded-md transition hover:animate-pulse hover:cursor-pointer px-5 h-10 inline-flex items-center justify-center text-nowrap">
+            <p class="">Заказать текст</p>
+        </button>
+    </div>
+</header>
+
+
+
+    <section class="pt-10 @xs:px-10 @3xl:px-15 @5xl:px-25 @5xl:text-2xl @3xl:text-xl @xs:text-md">
+        <div class="m-auto">
+            <div class="mb-10">
+                <h1 class="font-bold font-display mb-6 @5xl:text-5xl @3xl:text-4xl @xs:text-2xl">Давайте знакомиться!</h1>
+                <p class="text-lg leading-relaxed mb-4">
+                    Здравствуйте! Я Ульяна Назаркина — копирайтер, контент-маркетолог. <br>
+                    В интернет-маркетинг и копирайтинг пришла в 2015 году из веб-дизайна. А через год обучения оставила работу в крупной компании и стала фрилансером. С тех пор пишу на заказ тексты для сайтов и помогаю своим клиентам создавать красоту.
+                </p>
+            </div>
+
+            <div class="w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden mt-8">
+                <img src="./images/banner.jpg" alt="Ульяна Назаркина" class="w-full h-full object-cover ">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 @5xl:text-xl @3xl:text-jg @xs:text-md">
+        <div class="max-w-[1500px] mx-auto">
+            <h2 class="@5xl:text-5xl @3xl:text-4xl @xs:text-2xl font-bold font-display text-center mb-16">Мои профессиональные навыки</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 @xs:px-10 @3xl:px-15 @5xl:px-25">
+                
+                <div class="bg-rectan p-8 rounded-lg  hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 1.svg" class="w-10 h-10">
+                        <h3 class="">Грамотная речь, лаконичный слог</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Владею чистой и выразительной письменной речью. Создаю тексты без ошибок и с четкой структурой.</p>
+                </div>
+
+                <div class="bg-rectan p-8 rounded-lg hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 2.svg" class="w-10 h-10">
+                        <h3 class="">Структурирование информации</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Превращаю сложную информацию в понятные тексты с четкой логикой изложения, выделяю главное.</p>
+                </div>
+
+                <div class="bg-rectan p-8 rounded-lg hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 3.svg" class="w-10 h-10">
+                        <h3 class="">Знание интернет- маркетинга</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Анализирую рынок и целевую аудиторию, помогаю выстраивать контент-стратегии для достижения бизнес-целей.</p>
+                </div>
+
+                <div class="bg-rectan p-8 rounded-lg hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 4.svg" class="w-10 h-10">
+                        <h3 class="">Доступное понимание для вас</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Объясняю сложные темы простыми словами. Пишу в живом стиле, близком к разговорной речи.</p>
+                </div>
+
+                <div class="bg-rectan p-8 rounded-lg hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 5.svg" class="w-10 h-10">
+                        <h3 class="">Знание основ SEO-оптимизации</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Работаю с профессиональными сервисами для проверки SEO-параметров. Умею вписывать ключи.</p>
+                </div>
+
+                <div class="bg-rectan p-8 rounded-lg hover:shadow-md transition max-w-[460px] mx-auto">
+                    <div class="flex items-center gap-4 mb-4 max-w-[70%]">
+                        <img src="./Buttons/edit 6.svg" class="w-10 h-10">
+                        <h3 class="">Работа с визуальным контентом</h3>
+                    </div>
+                    <p class="@5xl:text-lg @3xl:text-md @xs:text-xs leading-relaxed opacity-[70%]">Создаю единое информационное пространство, где текст и визуал дополняют друг друга.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="order-form" class="py-24 bg-cream-bg">
+        <div class="@xs:px-10 @3xl:px-15 @5xl:px-25 grid grid-cols-1 md:grid-cols-2 gap-8 @5xl:gap-30 @7xl:gap-70">
+
+            <div>
+                <h2 class="@5xl:text-4xl text-3xl font-semibold font-display mb-8">Оформить заказ</h2>
+                <form class="text-md @3xl:text-lg">
+                    <div>
+                        <label>Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Иван" class="border rounded-sm mb-4 w-[100%] p-[8px] @3xl:p-[12px] focus:outline-none">
+                    </div>
+                    <div>
+                        <label>Ваша фамилия</label>
+                        <input type="text" id="surname" name="surname" placeholder="Иванов" class="border rounded-sm mb-4 w-[100%] p-[8px] @3xl:p-[12px] focus:outline-none">
+                    </div>
+                    <div>
+                        <label>Телефон для связи с вами</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999 99-99" class="border rounded-sm mb-4 w-[100%] p-[8px] @3xl:p-[12px] focus:outline-none">
+                    </div>
+                    <div>
+                        <label>Ваша электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="ivanivanov@mail.ru" class="border rounded-sm mb-4 w-[100%] p-[8px] @3xl:p-[12px] focus:outline-none">
+                    </div>
+                    <div>
+                        <label>Опишите ваш заказ</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Текст вашего сообщения" class="border rounded-sm mb-4 w-[100%] p-[8px] @3xl:p-[12px] focus:outline-none"></textarea>
+                    </div>
+                    
+                    <div class="w-[100%] p-[8px] @3xl:p-[12px] border-1 rounded-md grid content-center bg-orange-dark text-main hover:animate-pulse">
+                        <input type="submit" value="Оставить заявку" id="submit-btn">
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <h2 class="@5xl:text-4xl text-3xl font-semibold font-display mb-8 md:text-right">Как мы будем сотрудничать</h2>
+                
+                <div class="grid gap-4 @3xl:gap-0 relative @7xl:text-xl @5xl:text-lg @xs:text-md">
+                    
+                    <div class="relative flex items-center md:justify-start">
+                        <span class="fade-number fade-hidden absolute -bottom-20 left-0 md:left-10 text-[10rem] md:text-[14rem] font-semibold font-display">1</span>
+                        <div class="relative z-10 max-w-xs">
+                            <p class="leading-relaxed">
+                                Изучаю вашу тему и задаю уточняющие вопросы. Вместе составляем подробный бриф.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-end text-right">
+                        <span class="fade-number fade-hidden absolute right-0 md:right-10 text-[10rem] md:text-[14rem] font-semibold font-display">2</span>
+                        <div class="relative z-10 max-w-xs pt-4">
+                            <p class="leading-relaxed">
+                                При необходимости совместно определяем структуру текста, источники информации и семантическое ядро.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center md:justify-start">
+                        <span class="fade-number fade-hidden absolute left-0 md:left-10 text-[10rem] md:text-[14rem] font-semibold font-display">3</span>
+                        <div class="relative z-10 max-w-xs pt-4">
+                            <p class="leading-relaxed">
+                                Пишу статью, пост, коммерческое предложение или другой требуемый формат.
+
+                                Разрабатываю слоганы, названия - в зависимости от поставленных задач.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-end text-right">
+                        <span class="fade-number fade-hidden absolute @3xl:-top-36 right-0 md:right-10 text-[10rem] md:text-[14rem] font-semibold font-display">4</span>
+                         <div class="relative z-10 max-w-xs pt-4">
+                            <p class="leading-relaxed">
+                                Предоставляю готовый текст с комментариями по содержанию.
+
+                                Объясняю вам принятые решения.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class="relative flex items-center md:justify-start pt-8">
+                         <span class="fade-number fade-hidden absolute left-0 md:left-10 text-[10rem] md:text-[14rem] font-semibold font-display">5</span>
+                        <div class="relative z-10 max-w-xs">
+                            <p class="leading-relaxed">
+                                Убеждаемся, что текст полностью соответствует вашим ожиданиям.
+
+                                <span class="bg-beige-accent/30 px-1">При необходимости оперативно вносим правки и корректировки без дополнительной оплаты.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="mt-auto @xs:px-10 @3xl:px-15 @5xl:px-25">
+    <hr class="border-hr ">
+</div>
+
+<footer class="flex flex-col @2xl:flex-row items-center @2xl:items-start justify-between py-[54px] @xs:px-10 @3xl:px-15 @5xl:px-25 ">
+    <div class="flex flex-col gap-[20px] @2xl:gap-[88px]">
+        <p class="text-orange-dark cursor-default">Копирайтер Ульяна Назаркина</p>
+        <div class="flex">
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon.svg" alt="фейсбук">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-1.svg" alt="ин">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-2.svg" alt="ютуб">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-3.svg" alt="инстаграм">
+            </a>    
+        </div>                                
+    </div>
+    <a class="" href="./index.html" target="_blank">
+        <img src="./images/logo.png" alt="logo" class="w-[150px]">
+    </a>
+    <div class="flex flex-col gap-[16px] text-orange-dark/50 text-center @2xl:text-right">
+        <p class="font-semibold text-orange-dark cursor-default">Страницы</p>
+        <a class="hover:underline" href="./about.html" target="_blank">Обо мне</a>
+        <a class="hover:underline" href="./services.html" target="_blank">Услуги</a>
+        <a class="hover:underline" href="./reviews.html" target="_blank">Отзывы</a>
+        <a class="hover:underline" href="./price.html" target="_blank">Цены</a>
+    </div>
+</footer>
+<script src="./index.js"></script>
+
+<script src="./numbers.js"></script>
+
+</body>
+</html>

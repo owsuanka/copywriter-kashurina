@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream-bg': '#F8F5EF',
+                        'dark-brown': '#4A3F35',
+                        'body-brown': '#7A6F65',
+                        'btn-brown': '#8C6E5A',
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Times New Roman', 'serif'], // Для заголовков
+                        'sans': ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream-bg font-sans antialiased text-body-brown">
+
+    <main class="overflow-hidden">
+
+        <section class="py-16 md:py-24 max-w-[1400px] mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                
+                <div class="w-full md:w-1/2 order-2 md:order-1 space-y-6">
+                    <p class="text-sm text-body-brown uppercase tracking-wider">Ульяна Назаркина</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-dark-brown leading-tight">
+                        Профессиональный копирайтер
+                    </h1>
+                    <p class="text-lg text-body-brown leading-relaxed max-w-lg">
+                        Пишу и редактирую тексты для компаний и частных лиц. В работе статьи для сайтов, блогов, сценарии, контент для презентаций, коммерческих предложений и досок объявлений, письма, посты.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-block bg-btn-brown text-white px-8 py-3 rounded-sm font-medium hover:bg-dark-brown transition duration-300">
+                            Заказать текст
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-md aspect-square md:aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
+                        <img src="./images/portfolio-hero.jpg" alt="Ульяна Назаркина" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 max-w-[1400px] mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-brown text-center mb-16 leading-tight">
+                Почему получается хорошо. Выгоды заказчиков
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                
+                <div class="fade-up opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-6 h-6 text-dark-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <h3 class="font-bold text-dark-brown text-lg">Спокойствие за результат</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Текст написан экспертом, который знает рынок и тенденции — итог будет полезным и соответствующим вашим целям.
+                    </p>
+                </div>
+
+                <div class="fade-up opacity-0 translate-y-8 transition-all duration-700 delay-100"><div class="flex items-center gap-3 mb-3">
+                        <svg class="w-6 h-6 text-dark-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="font-bold text-dark-brown text-lg">Надёжность и предсказуемость</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Чёткие сроки, прозрачные условия и отсутствие сюрпризов в процессе сотрудничества.
+                    </p>
+                </div>
+
+                <div class="fade-up opacity-0 translate-y-8 transition-all duration-700 delay-200">
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-6 h-6 text-dark-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <h3 class="font-bold text-dark-brown text-lg">То, что не обсуждается</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Честность, пунктуальность и профессионализм — не предмет переговоров, а основа работы. Репутация важнее сиюминутной выгоды — поэтому вы можете доверять.
+                    </p>
+                </div>
+
+                <div class="fade-up opacity-0 translate-y-8 transition-all duration-700 delay-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-6 h-6 text-dark-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <h3 class="font-bold text-dark-brown text-lg">Эффективность результата</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Фокус на достижении реальных целей клиента, а не просто на «красивом тексте».
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-cream-bg">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-brown text-center mb-12">
+                    Примеры моих работ
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-sm shadow-sm border border-gray-200">
+                             <img src="./images/work1.jpg" alt="Пост соцсетей" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <p class="text-center text-body-brown mt-4 text-lg">Посты для социальных сетей</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-sm shadow-sm border border-gray-200">
+                            <img src="./images/work2.jpg" alt="Статья сайта" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <p class="text-center text-body-brown mt-4 text-lg">Статьи для сайтов</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-sm shadow-sm border border-gray-200">
+                            <img src="./images/work3.jpg" alt="Сценарий видео" class="w-full h-auto transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <p class="text-center text-body-brownmt-4 text-lg">Сценарии для видеороликов</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 pb-24 max-w-[1400px] mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark-brown text-center mb-16">
+                Отзывы моих клиентов
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                            <img src="./images/avatar1.jpg" alt="Вилена" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-brown text-sm">Вилена Салтыкова</h4>
+                        </div>
+                    </div>
+                    <p class="text-xs text-body-brown leading-relaxed">
+                        Благодарю за подробную консультацию по ведению моих соц. сетей. Предстоит много работы.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                            <img src="./images/avatar2.jpg" alt="Роман" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-brown text-sm">Роман Грибов</h4>
+                        </div>
+                    </div>
+                    <p class="text-xs text-body-brown leading-relaxed">
+                        Мы остались довольны Вашей работой. Большое спасибо за оперативность. Прочитали – просто и оригинально.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                            <img src="./images/avatar3.jpg" alt="Босс" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-brown text-sm">Большой Русский Босс</h4>
+                        </div>
+                    </div>
+                    <p class="text-xs text-body-brown leading-relaxed">
+                        Зачётный текст для новой песни! Чувиха старается на каждой работой.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                            <img src="./images/avatar4.jpg" alt="Анна" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-brown text-sm">Анна Балакирева</h4>
+                        </div>
+                    </div>
+                    <p class="text-xs text-body-brown leading-relaxed">
+                        Спасибо, с текстом всё хорошо. Тезисы для флаера замечательные!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./advantages.js"></script>
+
+</body>
+</html>

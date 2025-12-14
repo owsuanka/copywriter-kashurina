@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги копирайтинга</title>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-main font-raleway font-medium text-orange-dark @container flex flex-col min-h-dvh">
+
+<!-- форма заявки -->
+<div class="w-full h-full invisible grid justify-center content-center opacity-0 fixed duration-300 z-999" id="my-modal">
+    <div class=" bg-main shadow-md rounded-md shadow-orange-dark/75 @xs:max-w-[300px] @3xl:max-w-[500px] @xs:p-[30px] @3xl:p-[45px] ">
+        <div class="flex justify-end mb-6">
+            <h1 class="@xs:text-2xl @3xl:text-3xl font-display text-nowrap mr-3 @3xl:mr-17">Оформить заказ</h1>
+            <button class="@xs:text-xl @3xl:text-2xl hover:cursor-pointer pt-1" id="close-button">X</button>
+        </div>
+        <form class="text-sm @3xl:text-lg">
+            <label>Ваше имя</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="firstname" placeholder="Иван">
+
+            <label>Ваша фамилия</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="lastname" placeholder="Иванов">
+
+            <label>Телефон для связи с вами</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="tel" name="phone" placeholder="+7 (999) 999 99-99">
+
+            <label>Ваша электронная почта</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="email" name="email" placeholder="IvanIvanov@mail.ru">
+
+            <label>Опишите ваш заказ</label>
+            <textarea class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" name="message" placeholder="Текст вашего сообщения"></textarea>
+
+            <div class="w-[100%] p-[8px] @3xl:p-[12px] border-1 rounded-md grid content-center bg-orange-dark text-main hover:animate-pulse">
+                <input type="submit" value="Оставить заявку" id="submit-btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="w-[100%] h-[100%] top-0 left-0 fixed bg-black/20 invisible opacity-0 duration-300 z-998" id="bg-modal"></div>
+<!-- форма заявки -->
+
+<!-- форма обратной связи -->
+<div class="w-full h-full invisible grid justify-center content-center opacity-0 fixed duration-300 z-999" id="my-modal-sv">
+    <div class=" bg-main shadow-md rounded-md shadow-orange-dark/75 max-w-[300px] @2xl:max-w-[500px] @3xl:max-w-[750px] @xs:p-[30px] @3xl:p-[45px] ">
+        <div class="flex items-start justify-end mb-6">
+            <h1 class="@xs:text-2xl @3xl:text-3xl font-display text-center w-[300px] @2xl:w-[400px] @3xl:w-[500px] @2xl:mr-2 @3xl:mr-15 ml-4 @2xl:ml-0">Оставить заявку на бесплатную консультацию</h1>
+            <button class="@xs:text-xl @3xl:text-2xl hover:cursor-pointer pt-1" id="close-button-sv">X</button>
+        </div>
+        <form class="text-sm @3xl:text-lg">
+            <label>Ваше имя</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="text" name="firstname" placeholder="Иван">
+
+            <label>Ваша электронная почта</label>
+            <input class="mb-4 w-[100%] p-[8px] @3xl:p-[12px] inline-block border-1 rounded-md focus:outline-none" type="email" name="email" placeholder="IvanIvanov@mail.ru">
+
+            <div class="w-[100%] p-[8px] @3xl:p-[12px] border-2 rounded-md grid content-center bg-orange-dark text-main hover:animate-pulse">
+                <input type="submit" value="Оставить заявку" id="submit-btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="w-[100%] h-[100%] top-0 left-0 fixed bg-black/20 invisible opacity-0 duration-300 z-998" id="bg-modal-sv"></div>
+<!-- форма обратной связи -->
+  
+
+<header class="absolute z-20 bg-transparent flex flex-col @5xl:flex-row justify-between items-center w-full h-40 @3xl:h-30 @5xl:h-24 pt-4 @xs:px-10 @3xl:px-15 @5xl:px-25 text-main">
+    <div class="flex items-center gap-x-[10px]">
+        <a class="w-[80px]" href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
+        <p class="cursor-default">KopyKash</p>
+    </div>
+    <div class="flex flex-col @3xl:flex-row items-center gap-4 @5xl:gap-6">
+        <div class="flex gap-4 @5xl:gap-6">
+            <a class="hover:underline text-nowrap" href="./about.html">Обо мне</a>
+            <a class="hover:underline" href="./services.html">Услуги</a>
+            <a class="hover:underline" href="./reviews.html">Отзывы</a>
+            <a class="hover:underline" href="./price.html">Цены</a>
+        </div>
+        <button type="button" id="open-modal-btn" class="text-orange-dark bg-main rounded-md transition hover:animate-pulse hover:cursor-pointer px-5 h-10 inline-flex items-center justify-center text-nowrap">
+            <p class="">Заказать текст</p>
+        </button>
+    </div>
+</header>
+
+
+<section class="relative h-[600px] flex items-center justify-center text-center text-main overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('./images/hero-bg.png');"></div>
+    <div class="absolute inset-0 bg-black/40 z-5"></div> <div class="relative z-10 px-4 max-w-3xl mx-auto mt-16">
+        <h1 class="text-4xl @3xl:text-5xl font-bold mb-4 leading-tight font-display">Услуги копирайтинга</h1>
+        <p class="text-lg @3xl:text-xl mb-8 max-w-xl mx-auto leading-relaxed">
+            Здесь представлены мои основные услуги. Если вы не нашли тот вид текста, который вам нужен, напишите мне.
+        </p>
+        <button type="button" id="open-modal-btn-sv" class="inline-flex items-center justify-center bg-main text-orange-dark px-5 h-10 rounded-sm font-medium transition hover:animate-pulse duration-300">
+            <p>Написать</p>
+        </button>
+    </div>
+</section>
+
+
+<main id="services" class="mx-auto @xs:px-10 @3xl:px-15 @5xl:px-25 px-4 py-24 space-y-24 @5xl:text-2xl @3xl:text-xl @xs:text-md">
+
+    <div class="flex flex-col @5xl:flex-row items-center @5xl:items-start gap-12 justify-between">
+        <div class="shrink-0">
+            <img src="./images/scenari.png" alt="Сценарий для видео" class="w-[400px] h-auto @3xl:w-auto @3xl:h-[470px] rounded-sm shadow-sm object-cover">
+        </div>
+        <div class="space-y-4">
+            <h2 class="@5xl:text-3xl @3xl:text-2xl @xs:text-xl font-bold">Сценарий для видео</h2>
+            <p class="leading-relaxed">
+                Проработанный и готовый к съемкам сценарий, который удерживает внимание зрителя с первых секунд. Идеально для рекламных роликов, видео-презентаций продукта или услуги.</p>
+            <p class="leading-relaxed">
+                <strong>Как выполняется?</strong><br>
+                Я начинаю с изучения вашего продукта, целевой аудитории и цели видео, чтобы определить ключевое сообщение и призыв к действию. Затем разрабатываю сценарий по принципу «проблема — решение — выгода», одновременно продумывая визуальный ряд для каждого блока. Пишется живой, разговорный текст для диктора, который легко воспринимается на слух.
+            </p>
+            <div class="pt-4 border-t">
+                <p class="">
+                    <span class="font-bold">Объем работы:</span><br>
+                    Сценарий на 1,5 - 3 минуты эфира (что соответствует 1500 - 3000 знаков текста) с полной раскадровкой, репликами и техническими пометками.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col @5xl:flex-row-reverse items-center @5xl:items-start gap-12 justify-between">
+        <div class="shrink-0">
+                <img src="./images/kartochka.png" alt="SEO-описания" class="w-[400px] h-auto @3xl:w-auto @3xl:h-[470px] rounded-sm shadow-sm object-cover">
+        </div>
+        <div class="space-y-4">
+            <h2 class="text-2xl @3xl:text-3xl font-bold">SEO-описания для карточек товаров</h2>
+            <p class="leading-relaxed">
+                Продающие и "понятные" для поисковых систем описания, которые не только продвигают ваш товар или услугу в топ выдачи, но и убеждают пользователя совершить покупку.
+            </p>
+                <p class="leading-relaxed">
+                <strong>Как выполняется?</strong><br>
+                Я тщательно изучаю ваш товар, его преимущества и то, как о нем пишут конкуренты. В текст точно и естественно вписываются коммерческие запросы, по которым вас ищут покупатели. Основной фокус — на убедительности и пользе: я делаю акцент на выгодах для клиента, отвечаю на его скрытые возражения и призываю к действию.
+            </p>
+            <div class="pt-4 border-t">
+                <p class="">
+                    <span class="font-bold ">Объем работы:</span><br>
+                    800 - 1500 знаков — лаконичный, но емкий текст, который размещается в отведенном поле и содержит всю необходимую информацию.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col @5xl:flex-row items-center @5xl:items-start gap-12 justify-between">
+        <div class="shrink-0">
+            <img src="./images/blog.png" alt="Статья для блога" class="w-[400px] h-auto @3xl:w-auto @3xl:h-[470px] rounded-sm shadow-sm object-cover">
+        </div>
+        <div class="space-y-4">
+            <h2 class="@5xl:text-3xl @3xl:text-2xl @xs:text-xl font-bold">Статья для блога с SEO-продвижением</h2>
+            <p class="leading-relaxed">
+                Глубокая и полезная статья, которая решает проблему читателя и продвигает ваш блог в поисковых системах по конкретным запросам. Идеально для привлечения новой аудитории и укрепления экспертного статуса.
+            </p>
+            <p class="leading-relaxed">
+                <strong>Как выполняется?</strong><br>
+                Перед началом работы я глубоко погружаюсь в вашу тему и анализирую целевую аудиторию. Я изучаю поисковую выдачу, чтобы подобрать и грамотно вписать ключевые запросы. Текст строится вокруг четкой логической структуры, которая удерживает внимание.
+            </p>
+            <div class="pt-4 border-t"><p class="">
+                    <span class="font-bold ">Объем работы:</span><br>
+                    2000 - 4000 знаков — этого достаточно для полноценного раскрытия большинства тем и эффективного SEO.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col @5xl:flex-row-reverse items-center @5xl:items-start gap-12 justify-between">
+        <div class="shrink-0">
+                <img src="./images/lsi.png" alt="Коммерческий LSI-текст" class="w-[400px] h-auto @3xl:w-auto @3xl:h-[470px] rounded-sm shadow-sm object-cover">
+        </div>
+        <div class="space-y-4">
+            <h2 class="text-2xl @3xl:text-3xl font-bold ">Коммерческий LSI-текст для главной страницы</h2>
+            <p class="leading-relaxed">
+                Мощный текст для ключевой страницы сайта, который не только продвигает ее по высокочастотным запросам, но и охватывает все смежные темы (LSI-слова). Это повышает релевантность страницы в глазах поисковиков.
+            </p>
+                <p class="leading-relaxed">
+                <strong>Как выполняется?</strong><br>
+                Моя работа начинается с глубокого анализа вашего бизнеса, услуг и отличий от конкурентов, чтобы сформировать полную семантическую карту, включающую LSI-фразы. Далее я создаю четкую иерархическую структуру с блоками.
+            </p>
+            <div class="pt-4 border-t">
+                <p class="">
+                    <span class="font-bold ">Объем работы:</span><br>
+                    4000 - 8000 знаков — объемный, структурированный текст, который полностью раскрывает тему.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<section id="cta" class="bg-hr py-12 mb-10">
+    <div class="mx-auto @xs:px-10 @3xl:px-15 @5xl:px-25 flex flex-col @3xl:flex-row items-center justify-between gap-10">
+        <h2 class="text-3xl @3xl:text-5xl font-bold max-w-lg text-center @3xl:text-left font-display">
+            Заказать текст или узнать цену
+        </h2>
+        <div class="flex gap-4 text-lg">
+            <button type="button" id="open-modal-btn-2" class="text-main bg-orange-dark rounded-md transition hover:animate-pulse hover:cursor-pointer px-5 h-14 inline-flex items-center justify-center text-nowrap">
+                <p class="">Заказать текст</p>
+            </button>
+            <a class="text-orange-dark bg-main rounded-md transition hover:animate-pulse hover:cursor-pointer px-5 h-14 inline-flex items-center justify-center text-nowrap" href="./price.html" target="_blank">
+                <button type="button" id="price-btn" >
+                    <p class="hover:cursor-pointer">Узнать цену</p>
+                </button>
+            </a>    
+        </div>
+    </div>
+</section>
+
+
+<div class="mt-auto @xs:px-10 @3xl:px-15 @5xl:px-25">
+    <hr class="border-hr ">
+</div>
+
+<footer class="flex flex-col @2xl:flex-row items-center @2xl:items-start justify-between py-[54px] @xs:px-10 @3xl:px-15 @5xl:px-25 ">
+    <div class="flex flex-col gap-[20px] @2xl:gap-[88px]">
+        <p class="text-orange-dark cursor-default">Копирайтер Ульяна Назаркина</p>
+        <div class="flex">
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon.svg" alt="фейсбук">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-1.svg" alt="ин">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-2.svg" alt="ютуб">
+            </a>
+            <a href="popa;" target="_blank">
+                <img src="./Buttons/Icon-3.svg" alt="инстаграм">
+            </a>    
+        </div>                                
+    </div>
+    <a class="" href="./index.html" target="_blank">
+        <img src="./images/logo.png" alt="logo" class="w-[150px]">
+    </a>
+    <div class="flex flex-col gap-[16px] text-orange-dark/50 text-center @2xl:text-right">
+        <p class="font-semibold text-orange-dark cursor-default">Страницы</p>
+        <a class="hover:underline" href="./about.html" target="_blank">Обо мне</a>
+        <a class="hover:underline" href="./services.html" target="_blank">Услуги</a>
+        <a class="hover:underline" href="./reviews.html" target="_blank">Отзывы</a>
+        <a class="hover:underline" href="./price.html" target="_blank">Цены</a>
+    </div>
+</footer>
+
+<script src="./index.js"></script>
+<script src="./btn-2.js"></script>
+</body>
+</html>
